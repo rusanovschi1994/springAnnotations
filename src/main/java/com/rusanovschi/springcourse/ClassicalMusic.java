@@ -5,10 +5,13 @@
  */
 package com.rusanovschi.springcourse;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author IT-0
  */
+@Component
 public class ClassicalMusic implements Music {
 
     private ClassicalMusic() {

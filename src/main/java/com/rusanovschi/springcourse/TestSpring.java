@@ -5,6 +5,8 @@
  */
 package com.rusanovschi.springcourse;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  *
  * @author IT-0
@@ -13,7 +15,7 @@ public class TestSpring {
 
     public static void main(String[] args) {
 
-        ClassicalMusic cc = ClassicalMusic.getClassicalMusic();
-    }
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
+    }
 }
