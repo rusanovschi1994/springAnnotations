@@ -11,5 +11,5 @@ package com.rusanovschi.springcourse;
  */
 public interface Music {
 
-    public void getSong();
+    public String getSong();
 }

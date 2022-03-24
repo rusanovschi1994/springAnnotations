@@ -11,8 +11,17 @@ package com.rusanovschi.springcourse;
  */
 public class ClassicalMusic implements Music {
 
+    private ClassicalMusic() {
+
+    }
+    
+    //factory-method
+    public static ClassicalMusic getClassicalMusic() {
+        return new ClassicalMusic();
+    }
+
     @Override
-    public void getSong() {
-        System.out.println("Hungarian Raphsody");
+    public String getSong() {
+        return "Hundarian raphsody";
     }
 }

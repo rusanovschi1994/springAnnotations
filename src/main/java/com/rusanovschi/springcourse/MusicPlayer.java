@@ -9,11 +9,15 @@ package com.rusanovschi.springcourse;
  *
  * @author IT-0
  */
-public class RockMusic implements Music {
+public class MusicPlayer {
 
-    
-    @Override
-    public String getSong() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private Music music;
+
+    public MusicPlayer(Music music) {
+        this.music = music;
+    }
+
+    public void playMusic() {
+        System.out.println("Playing: " + music.getSong());
     }
 }

@@ -13,6 +13,7 @@ public class TestSpring {
 
     public static void main(String[] args) {
 
+        ClassicalMusic cc = ClassicalMusic.getClassicalMusic();
     }
 
 }
