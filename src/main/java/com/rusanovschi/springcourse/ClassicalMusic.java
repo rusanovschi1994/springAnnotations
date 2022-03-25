@@ -5,6 +5,8 @@
  */
 package com.rusanovschi.springcourse;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -14,14 +16,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClassicalMusic implements Music {
 
-    private ClassicalMusic() {
-
+    @PostConstruct
+    public void doMyInit(){
+        System.out.println("Doing my initialization");
     }
     
-    //factory-method
-    public static ClassicalMusic getClassicalMusic() {
-        return new ClassicalMusic();
+    @PreDestroy
+    public void doMyDestroy(){
+        System.out.println("Doing my distraction");
     }
+//    private ClassicalMusic() {
+//
+//    }
+//    
+//    //factory-method
+//    public static ClassicalMusic getClassicalMusic() {
+//        return new ClassicalMusic();
+//    }
 
     @Override
     public String getSong() {
