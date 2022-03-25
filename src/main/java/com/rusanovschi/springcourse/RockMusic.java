@@ -5,15 +5,18 @@
  */
 package com.rusanovschi.springcourse;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author IT-0
  */
+@Component
 public class RockMusic implements Music {
 
     
     @Override
     public String getSong() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return "We will rock you";
     }
 }

@@ -13,18 +13,19 @@ import org.springframework.stereotype.Component;
  * @author IT-0
  */
 @Component
-public class MusicPlayer {
-
-    private Music music;
-
-    //IoC
+public class Computer {
+    
+    private int id;
+    private MusicPlayer musicPlayer;
+    
     @Autowired
-    public MusicPlayer(Music music){
-        this.music = music;
+    public Computer(MusicPlayer musicPlayer){
+        this.id = 1;
+        this.musicPlayer = musicPlayer;
     }
 
     @Override
     public String toString() {
-        return "playing: " + music.getSong();
-    }
+        return "Computer with id = " + id + ", " + musicPlayer; 
+    } 
 }
